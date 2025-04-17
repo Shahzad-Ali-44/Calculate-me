@@ -12,7 +12,7 @@ Welcome to **Calculate Me!**, a basic yet functional calculator built with HTML,
 
 ## Demo
 
-You can try the live demo of the calculator by visiting the [live version](https://shahzad-ali-44.github.io/Calculate-me/) (if hosted on a platform like GitHub Pages or another server).
+You can try the live demo of the calculator by visiting the [live version](https://shahzad-ali-44.github.io/Calculate-me/)
 
 ## Technologies Used
 

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate Me</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">Calculate Me</div>
+          <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <ul class="navbar-links" id="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html" class="active">Features</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="features-section">
+        <h1>Features</h1>
+        <ul class="features-list">
+          <li><strong>Clean UI:</strong> Simple and modern design for an easy-to-use calculator.</li>
+          <li><strong>Basic Math Support:</strong> Add, subtract, multiply, and divide with instant results.</li>
+          <li><strong>Mobile Friendly:</strong> Fully responsive layout that works on all screen sizes.</li>
+          <li><strong>Fast & Lightweight:</strong> Minimal code with smooth performance.</li>
+          <li><strong>Accessible:</strong> Keyboard and screen-reader friendly design.</li>
+        </ul>
+        <div class="feature-highlights">
+          <h2>Why I Built This</h2>
+          <ul>
+            <li>To practice frontend development with a real-world example.</li>
+            <li>To explore responsive layouts and accessibility.</li>
+            <li>To build something useful and easy to share.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content container">
+        &copy; <span id="footer-year"></span> Calculate Me. All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.getElementById('navbar-toggle');
+      const links = document.getElementById('navbar-links');
+      toggle.addEventListener('click', function () {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !expanded);
+        links.classList.toggle('active');
+      });
+
+      document.getElementById('footer-year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

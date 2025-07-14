@@ -1,54 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calculate Me</title>
-  <link href="style.css" rel="stylesheet" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-</head>
-
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculate Me</title>
+        <link href="style.css" rel="stylesheet" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+      </head>
 <body>
-  <h1 class="text-center">Calculate Me</h1>
-  <div class="container">
-    <div class="row">
-      <input class="input" type="text" readonly />
-    </div>
-    <div class="row">
-      <button class="button clear">C</button>
-      <button class="button">%</button>
-    </div>
-    <div class="row">
-      <button class="button">7</button>
-      <button class="button">8</button>
-      <button class="button">9</button>
-      <button class="button operator">*</button>
-    </div>
-    <div class="row">
-      <button class="button">4</button>
-      <button class="button">5</button>
-      <button class="button">6</button>
-      <button class="button operator">/</button>
-    </div>
-    <div class="row">
-      <button class="button">1</button>
-      <button class="button">2</button>
-      <button class="button">3</button>
-      <button class="button operator">+</button>
-    </div>
-    <div class="row">
-      <button class="button">0</button>
-      <button class="button">.</button>
-      <button class="button equal">=</button>
-      <button class="button operator">-</button>
-    </div>
-  </div>
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2025 Calculate Me.</p>
-  </footer>
-  <script src="script.js"></script>
-</body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">Calculate Me</div>
+                <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="navbar-links" id="navbar-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="calculator-section">
+            <div class="calculator">
+                <input type="text" class="calculator-display" id="display" disabled aria-label="Calculator display" />
+                <div class="calculator-buttons">
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>/</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>*</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>-</button>
+                    <button>0</button>
+                    <button>.</button>
+                    <button>=</button>
+                    <button>+</button>
+                    <button id="clear" colspan="4">C</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content container">
+            &copy; <span id="footer-year"></span> Calculate Me. All rights reserved.
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      const toggle = document.getElementById('navbar-toggle');
+      const links = document.getElementById('navbar-links');
+      toggle.addEventListener('click', function() {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !expanded);
+        links.classList.toggle('active');
+      });
 
-</html>
+      document.getElementById('footer-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html> 

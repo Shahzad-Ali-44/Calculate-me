@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate Me</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">Calculate Me</div>
+          <button
+            class="navbar-toggle"
+            id="navbar-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <ul class="navbar-links" id="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="about-section">
+        <h1>About Calculate Me</h1>
+        <div class="about-content">
+          <p><strong>Calculate Me</strong> is a simple and modern calculator web app, created as a practice project to improve my frontend development skills.</p>
+
+          <h2>Why I Built It</h2>
+          <p>I wanted to build a clean, responsive, and accessible calculator using HTML, CSS, and JavaScript and learn how to design real-world user interfaces along the way.</p>
+
+          <h2>What It Offers</h2>
+          <ul>
+            <li>Responsive design for all screen sizes</li>
+            <li>Smooth, modern UI experience</li>
+            <li>Basic arithmetic functionality</li>
+          </ul>
+
+          <h2>Open Source</h2>
+          <p>This is an open source project. You can view or contribute to the code on GitHub:</p>
+          <p><a href="https://github.com/Shahzad-Ali-44/Calculate-me" target="_blank">github.com/Shahzad-Ali-44/Calculate-me</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content container">
+        &copy; <span id="footer-year"></span> Calculate Me. All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.getElementById('navbar-toggle');
+      const links = document.getElementById('navbar-links');
+      toggle.addEventListener('click', function () {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !expanded);
+        links.classList.toggle('active');
+      });
+
+      document.getElementById('footer-year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

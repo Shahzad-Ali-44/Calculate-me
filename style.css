@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   width: 100vw;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -7,6 +8,7 @@ html, body {
   display: flex;
   flex-direction: column;
 }
+
 body {
   flex: 1 0 auto;
   display: flex;
@@ -21,7 +23,7 @@ body {
 header {
   background: #222;
   color: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .container {
@@ -80,7 +82,7 @@ header {
 
 .navbar-links li a:hover {
   color: #ffd700;
-  background: rgba(255,255,255,0.07);
+  background: rgba(255, 255, 255, 0.07);
 }
 
 main {
@@ -114,7 +116,7 @@ main {
   background: #222;
   padding: 1.5rem;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
 }
 
@@ -169,7 +171,7 @@ main {
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(30, 90, 157, 0.1),
-              0 1.5px 6px rgba(67, 206, 162, 0.08);
+    0 1.5px 6px rgba(67, 206, 162, 0.08);
   padding: 2rem;
   margin: 2rem auto;
   max-width: 720px;
@@ -241,6 +243,7 @@ main {
   padding-left: 1.2rem;
   margin-bottom: 1.5rem;
 }
+
 footer {
   flex-shrink: 0;
   width: 100vw;
@@ -258,6 +261,7 @@ footer {
   justify-content: center;
   z-index: 5;
 }
+
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -302,21 +306,26 @@ footer {
     max-width: 100vw;
     padding: 0 1rem;
   }
+
   .navbar-links {
     gap: 1rem;
   }
 }
+
 @media (max-width: 600px) {
   .container {
     max-width: 160vw;
     padding: 0 0.5rem;
   }
+
   .navbar .container {
     height: 48px;
   }
+
   .navbar-toggle {
     display: flex;
   }
+
   .navbar-links {
     position: absolute;
     top: 100%;
@@ -327,55 +336,67 @@ footer {
     gap: 0;
     display: none;
     padding: 0.5rem 0 1rem 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     z-index: 15;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     transition: all 0.3s;
   }
+
   .navbar-links.active {
     display: flex;
   }
+
   .navbar-links li {
     width: 100%;
     text-align: left;
     padding: 0.7rem 2rem;
   }
+
   .navbar-links li a {
     width: 100%;
     display: block;
     font-size: 1.1rem;
     padding: 0.7rem 0;
   }
+
   .calculator-section {
     padding: 1rem 0;
     min-height: 0;
   }
+
   .calculator {
-    width: 95vw;
-    max-width: 95vw;
-    padding: 1rem 0.5rem;
+    width: 80vw;
+    height: 70vh;
+    padding: 2rem 1rem;
     border-radius: 12px;
   }
+
   .calculator-display {
-    font-size: 1.3rem;
-    height: 40px;
+    font-size: 2.3rem;
+    height: 85px;
     padding: 0.3rem;
   }
+
   .calculator-buttons {
-    gap: 0.3rem;
+    gap: 0.7rem;
+    margin-top: 3rem;
   }
+
   .calculator-buttons button {
     font-size: 1.1rem;
     padding: 0.7rem 0;
     border-radius: 6px;
   }
+
   #clear {
     font-size: 1.1rem;
     padding: 0.7rem 0;
     border-radius: 6px;
   }
-  .features-section, .about-section {
+
+  .features-section,
+  .about-section {
     padding: 1.2rem 0.5rem 1.2rem 0.5rem;
     max-width: 98vw;
     width: 94vw;
@@ -383,35 +404,45 @@ footer {
     border-radius: 12px;
     box-sizing: border-box;
   }
-  .features-section h1, .about-section h1 {
+
+  .features-section h1,
+  .about-section h1 {
     font-size: 1.5rem;
   }
+
   .features-list {
     font-size: 1rem;
   }
+
   .about-content {
     font-size: 1rem;
   }
+
   .screenshot-box {
-      padding: 1rem;
-      font-size: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
   }
+
   main {
-      padding: 1rem 0 0.5rem 0;
-      width: 100vw;
-      box-sizing: border-box;
+    padding: 1rem 0 0.5rem 0;
+    width: 100vw;
+    box-sizing: border-box;
   }
-  footer, .footer-content {
+
+  footer,
+  .footer-content {
     width: 100vw;
     margin: 0;
     box-sizing: border-box;
   }
+
   .footer-content {
     padding: 1rem 0.5rem;
     font-size: 0.98rem;
     min-height: 2px;
   }
+
   footer {
     min-height: 20px;
   }
-} 
+}
